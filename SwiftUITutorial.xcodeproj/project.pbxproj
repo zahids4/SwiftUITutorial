@@ -93,6 +93,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		27517D8F248AB58000069E25 /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				27517D8A248A9FBC00069E25 /* ImageLoader.swift */,
+				27517D8C248A9FE200069E25 /* AsyncImage.swift */,
+			);
+			path = ImageLoading;
+			sourceTree = "<group>";
+		};
+		27517D90248AB59400069E25 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27517D832489D75C00069E25 /* StoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2793025724897D9E00177B46 = {
 			isa = PBXGroup;
 			children = (
@@ -117,15 +134,14 @@
 				2793026324897D9F00177B46 /* AppDelegate.swift */,
 				2793026524897D9F00177B46 /* SceneDelegate.swift */,
 				2793026724897D9F00177B46 /* ContentView.swift */,
+				27517D85248A9C3500069E25 /* Models */,
+				27517D8E248AB35500069E25 /* Views */,
+				27517D90248AB59400069E25 /* Services */,
+				27517D8F248AB58000069E25 /* ImageLoading */,
 				2793026924897DA100177B46 /* Assets.xcassets */,
 				2793026E24897DA100177B46 /* LaunchScreen.storyboard */,
 				2793027124897DA100177B46 /* Info.plist */,
 				2793026B24897DA100177B46 /* Preview Content */,
-				27517D85248A9C3500069E25 /* Models */,
-				27517D8E248AB35500069E25 /* Views */,
-				27517D832489D75C00069E25 /* StoryService.swift */,
-				27517D8A248A9FBC00069E25 /* ImageLoader.swift */,
-				27517D8C248A9FE200069E25 /* AsyncImage.swift */,
 			);
 			path = SwiftUITutorial;
 			sourceTree = "<group>";
