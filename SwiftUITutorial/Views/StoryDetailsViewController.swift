@@ -9,9 +9,20 @@
 import SwiftUI
 
 struct StoryDetailsViewController: View {
+    @State private var showingAlert = false
     let clickedStory: Story
     
     var body: some View {
-        StoryRow(story: clickedStory, titleColor: Color.black, descriptionColor: Color.black)
+        VStack {
+            Text("Click the image!")
+            StoryRow(story: clickedStory, titleColor: Color.black, descriptionColor: Color.black).onTapGesture {
+                self.showingAlert = true
+            }
+        }
+        /// The $ creates a binding since isPresented takes in Binding<Bool>
+        .alert(isPresented: $showingAlert) {
+            //Dismissing the alert sets showingAlert back to false
+            Alert(title: Text("Important message"), message: Text(""), dismissButton: .default(Text("Got it!")))
+        }
     }
 }
