@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct StoryDetailsViewController: View {
-    var clickedStory: Story
+    let clickedStory: Story
     
     var body: some View {
         return HStack {
