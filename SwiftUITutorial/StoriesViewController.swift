@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct StoriesViewController: View {
+    @ObservedObject var service = StoryService()
     @State var stories = [Story]()
     
     func addStory() {
-        let story = Story(name: "Newly added Story", description: "This is a newly added story wow cool")
-        stories.append(story)
+        print("Added")
     }
     
     var body: some View {
         return NavigationView {
-            List(stories, id: \.id) { story in
+            List(service.stories, id: \.id) { story in
                 NavigationLink(destination: StoryDetailsViewController(clickedStory: story)) {
                    StoryRow(story: story)
                 }
@@ -30,13 +30,7 @@ struct StoriesViewController: View {
                                 .fontWeight(.semibold) })
             )
         }.onAppear(perform: {
-            self.stories = [Story(name: "After",
-                                  imageName: "tanjiro",
-                                  description: "Sword1 boiSword1 boiSword1 boiSword1 boiSword1 boiSword1 boiSword1 boiSword1               boiSword1 boiSword1 boiSword1 boiSword1 boiSword1 boi"),
-                            Story(name: "Story 2",
-                                  description: "Fist boi"),
-                            Story(name: "Story 3",
-                                  description: "Fist boi 2")]
+
         })
 
     }

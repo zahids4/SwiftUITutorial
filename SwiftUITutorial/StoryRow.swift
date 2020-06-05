@@ -15,8 +15,8 @@ struct StoryRow: View {
         HStack {
             Spacer()
             VStack {
-                Text(story.name).font(.largeTitle).bold()
-                Image(story.imageName).resizable()
+                Text(story.title).font(.largeTitle).bold()
+                Image(story.coverImage).resizable()
                 .frame(width: 200, height: 200)
                 Text(story.description)
                     .font(.footnote)
