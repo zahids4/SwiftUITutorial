@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		27517D7C2489D2D900069E25 /* StoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D7B2489D2D900069E25 /* StoryRow.swift */; };
 		27517D7E2489D2EF00069E25 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D7D2489D2EF00069E25 /* Story.swift */; };
-		27517D802489D31300069E25 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D7F2489D31300069E25 /* StoriesViewController.swift */; };
+		27517D802489D31300069E25 /* StoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D7F2489D31300069E25 /* StoriesListViewController.swift */; };
 		27517D822489D50C00069E25 /* StoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D812489D50C00069E25 /* StoryDetailsViewController.swift */; };
 		27517D842489D75C00069E25 /* StoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D832489D75C00069E25 /* StoryService.swift */; };
 		27517D87248A9C4400069E25 /* StoriesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27517D86248A9C4400069E25 /* StoriesJSON.swift */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		27517D7B2489D2D900069E25 /* StoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRow.swift; sourceTree = "<group>"; };
 		27517D7D2489D2EF00069E25 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		27517D7F2489D31300069E25 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		27517D7F2489D31300069E25 /* StoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListViewController.swift; sourceTree = "<group>"; };
 		27517D812489D50C00069E25 /* StoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailsViewController.swift; sourceTree = "<group>"; };
 		27517D832489D75C00069E25 /* StoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryService.swift; sourceTree = "<group>"; };
 		27517D86248A9C4400069E25 /* StoriesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesJSON.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				2793027124897DA100177B46 /* Info.plist */,
 				2793026B24897DA100177B46 /* Preview Content */,
 				27517D85248A9C3500069E25 /* Models */,
-				27517D7F2489D31300069E25 /* StoriesViewController.swift */,
+				27517D7F2489D31300069E25 /* StoriesListViewController.swift */,
 				27517D812489D50C00069E25 /* StoryDetailsViewController.swift */,
 				27517D7B2489D2D900069E25 /* StoryRow.swift */,
 				27517D832489D75C00069E25 /* StoryService.swift */,
@@ -240,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27517D802489D31300069E25 /* StoriesViewController.swift in Sources */,
+				27517D802489D31300069E25 /* StoriesListViewController.swift in Sources */,
 				2793026424897D9F00177B46 /* AppDelegate.swift in Sources */,
 				27517D8B248A9FBC00069E25 /* ImageLoader.swift in Sources */,
 				27517D822489D50C00069E25 /* StoryDetailsViewController.swift in Sources */,

@@ -19,7 +19,7 @@ struct StoryRow: View {
                 AsyncImage(
                     url: URL(string: story.coverImage)!,
                     placeholder: Text("Loading ..."), configuration: { $0.resizable() })
-                    .frame(width: 200, height: 200)
+                    .frame(width: 200, height: 200).cornerRadius(10)
                 Text(story.description)
                     .font(.footnote)
                     .fontWeight(.semibold)

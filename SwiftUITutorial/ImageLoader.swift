@@ -16,7 +16,6 @@ class ImageLoader: ObservableObject {
     private var cancellable: AnyCancellable?
     private(set) var isLoading = false
     
-    
     init(url: URL) {
         self.url = url
     }
@@ -24,8 +23,6 @@ class ImageLoader: ObservableObject {
     deinit {
         cancellable?.cancel()
     }
-    
-    
     
     func load() {
         guard !isLoading else { return }
