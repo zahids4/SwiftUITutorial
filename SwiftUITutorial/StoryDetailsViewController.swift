@@ -12,6 +12,6 @@ struct StoryDetailsViewController: View {
     let clickedStory: Story
     
     var body: some View {
-        StoryRow(story: clickedStory)
+        StoryRow(story: clickedStory, titleColor: Color.black, descriptionColor: Color.black)
     }
 }

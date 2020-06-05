@@ -10,12 +10,13 @@ import SwiftUI
 
 struct StoryRow: View {
     var story: Story
-
+    var titleColor: Color = Color.white
+    var descriptionColor: Color = Color.white
     var body: some View {
         HStack {
             Spacer()
             VStack {
-                Text(story.title).font(.largeTitle).bold().foregroundColor(Color.white)
+                Text(story.title).font(.largeTitle).bold().foregroundColor(titleColor)
                 AsyncImage(
                     url: URL(string: story.coverImage)!,
                     placeholder: Text("Loading ..."), configuration: { $0.resizable() })
@@ -25,7 +26,7 @@ struct StoryRow: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(descriptionColor)
             }
             Spacer()
         }
