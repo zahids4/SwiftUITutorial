@@ -9,8 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    private func refreshStories() {
+//        self.service.fetchStories()
+    }
+    
     var body: some View {
-        StoriesListViewController()
+        NavigationView {
+            StoriesListViewController()
+            .navigationBarTitle(Text("Stories"))
+            .navigationBarItems(
+                trailing: Button(action: refreshStories,
+                                 label: { Text("Refresh Stories").fontWeight(.semibold) })
+            )
+        }
+       
     }
 }
 
@@ -19,4 +31,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
 

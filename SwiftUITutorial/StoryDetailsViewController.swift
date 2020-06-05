@@ -12,9 +12,6 @@ struct StoryDetailsViewController: View {
     let clickedStory: Story
     
     var body: some View {
-        return HStack {
-            StoryRow(story: clickedStory)
-            Spacer()
-        }
+        StoryRow(story: clickedStory)
     }
 }

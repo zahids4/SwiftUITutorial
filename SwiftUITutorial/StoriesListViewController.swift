@@ -18,19 +18,24 @@ struct StoriesListViewController: View {
         self.service.fetchStories()
     }
     
+    /**
+        Changing background color on list only works if you use ForEach
+        using built in iterator ignores the background color
+         List(service.stories, id: \.id) { story in
+             NavigationLink(destination: StoryDetailsViewController(clickedStory: story)) {
+                StoryRow(story: story)
+             }
+         }
+     */
+    
     var body: some View {
-        return NavigationView {
-            List(service.stories, id: \.id) { story in
+        return List {
+            ForEach(service.stories, id: \.id) { story in
                 NavigationLink(destination: StoryDetailsViewController(clickedStory: story)) {
                    StoryRow(story: story)
-                }
+                }.listRowBackground(Color.black)
             }
-            .navigationBarTitle(Text("Stories"))
-            .navigationBarItems(
-              trailing: Button(action: refreshStories,
-                               label: { Text("Refresh Stories")
-                                .fontWeight(.semibold) })
-            )
+            
         }.onAppear(perform: {
             self.service.fetchStories()
         })

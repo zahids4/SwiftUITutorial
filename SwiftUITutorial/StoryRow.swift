@@ -15,7 +15,7 @@ struct StoryRow: View {
         HStack {
             Spacer()
             VStack {
-                Text(story.title).font(.largeTitle).bold()
+                Text(story.title).font(.largeTitle).bold().foregroundColor(Color.white)
                 AsyncImage(
                     url: URL(string: story.coverImage)!,
                     placeholder: Text("Loading ..."), configuration: { $0.resizable() })
@@ -25,6 +25,7 @@ struct StoryRow: View {
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
+                    .foregroundColor(Color.white)
             }
             Spacer()
         }
