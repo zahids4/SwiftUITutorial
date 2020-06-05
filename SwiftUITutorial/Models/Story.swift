@@ -29,5 +29,18 @@ struct Story: Identifiable, Decodable {
         coverImage = try container.decode(String.self, forKey: .coverImage)
         description = try container.decode(String.self, forKey: .description)
     }
+    
+    init() {
+        id = "12345"
+        title = "Saim"
+        coverImage = "Luffy"
+        description = "TEST DES"
+    }
+}
+
+extension Story {
+    static func getTestStory() -> Story {
+        return Story()
+    }
 }
 

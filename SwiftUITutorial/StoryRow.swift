@@ -12,6 +12,7 @@ struct StoryRow: View {
     var story: Story
     var titleColor: Color = Color.white
     var descriptionColor: Color = Color.white
+    
     var body: some View {
         HStack {
             Spacer()
@@ -29,6 +30,14 @@ struct StoryRow: View {
                     .foregroundColor(descriptionColor)
             }
             Spacer()
+        }
+    }
+}
+
+struct StoryRow_Previews: PreviewProvider {
+    static var previews: some View {
+        List {
+            StoryRow(story: Story.getTestStory())
         }
     }
 }

@@ -25,7 +25,6 @@ class StoryService: ObservableObject {
     }
     
     private func getStoriesUrl() -> URL? {
-        print(baseUrl + version + getStoriesEndpointString())
         return URL(string: baseUrl + version + getStoriesEndpointString())
     }
     
