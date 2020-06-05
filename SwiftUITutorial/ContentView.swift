@@ -9,13 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var service = StoryService()
+    
     private func refreshStories() {
-//        self.service.fetchStories()
+        self.service.fetchStories()
     }
     
     var body: some View {
         NavigationView {
-            StoriesListViewController()
+            StoriesListViewController(service: service)
             .navigationBarTitle(Text("Stories"))
             .navigationBarItems(
                 trailing: Button(action: refreshStories,
