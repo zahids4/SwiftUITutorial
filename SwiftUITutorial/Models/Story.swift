@@ -7,7 +7,7 @@
 //
 import SwiftUI
 
-struct  Story: Identifiable, Decodable {
+struct Story: Identifiable, Decodable {
     var id: String
     var title: String
     var coverImage: String

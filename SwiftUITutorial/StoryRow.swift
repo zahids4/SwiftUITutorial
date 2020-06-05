@@ -16,8 +16,10 @@ struct StoryRow: View {
             Spacer()
             VStack {
                 Text(story.title).font(.largeTitle).bold()
-                Image(story.coverImage).resizable()
-                .frame(width: 200, height: 200)
+                AsyncImage(
+                    url: URL(string: story.coverImage)!,
+                    placeholder: Text("Loading ..."), configuration: { $0.resizable() })
+                    .frame(width: 200, height: 200)
                 Text(story.description)
                     .font(.footnote)
                     .fontWeight(.semibold)
