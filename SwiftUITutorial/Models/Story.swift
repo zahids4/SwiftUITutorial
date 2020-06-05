@@ -10,7 +10,7 @@ import SwiftUI
 struct  Story: Identifiable, Decodable {
     var id: String
     var title: String
-    var coverImage: String = "Luffy"
+    var coverImage: String
     var description: String
     
     enum CodingKeys: String, CodingKey {
