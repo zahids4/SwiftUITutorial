@@ -12,15 +12,16 @@ struct StoriesViewController: View {
     @State var stories = [Story]()
     
     func addStory() {
-      if let randomStory = stories.randomElement() {
-        stories.append(randomStory)
-      }
+        let story = Story(name: "Newly added Story", description: "This is a newly added story wow cool")
+        stories.append(story)
     }
     
     var body: some View {
         return NavigationView {
             List(stories, id: \.id) { story in
-                StoryRow(story: story)
+                NavigationLink(destination: StoryDetailsViewController(clickedStory: story)) {
+                   StoryRow(story: story)
+                }
             }
             .navigationBarTitle(Text("Stories"))
             .navigationBarItems(
